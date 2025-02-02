@@ -1,81 +1,89 @@
-# Rapido - Home Services Booking Platform
+# Rapido - On-Demand Service Booking Platform
 
-A modern web application for booking home services, built with React and Tailwind CSS.
+A modern web application for booking professional services, built with React, Vite, and Supabase.
 
 ## Features
 
-- Browse and filter services by category
-- Detailed service pages with pricing information
-- Easy booking process with form validation
-- Booking confirmation system
-- Admin dashboard for managing bookings
-- Responsive design for all devices
-- Local storage for demo data persistence
+- 🔐 User Authentication
+- 📅 Service Booking System
+- 👥 Staff Management
+- 📊 Admin Dashboard
+- 🔔 Real-time Notifications
+- 📱 Responsive Design
 
 ## Tech Stack
 
-- React 18
-- React Router 6
-- Tailwind CSS
-- Date-fns
-- Heroicons
+- **Frontend:**
+  - React
+  - Vite
+  - TailwindCSS
+  - React Router
+  - Heroicons
+  - Recharts
 
-## Prerequisites
-
-- Node.js 16+ and npm
+- **Backend:**
+  - Supabase (Database & Authentication)
+  - PostgreSQL
+  - Row Level Security
 
 ## Getting Started
 
 1. Clone the repository:
-```bash
-git clone <repository-url>
-cd rapido
-```
+   ```bash
+   git clone https://github.com/Vrsabhaya/rapido.git
+   cd rapido
+   ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-3. Start the development server:
-```bash
-npm run dev
-```
+3. Create a `.env` file in the root directory:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
 
-4. Open your browser and visit:
-```
-http://localhost:5173
-```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
 ## Project Structure
 
 ```
-rapido/
-├── public/
-│   └── images/
-│       └── services/    # Service images
-├── src/
-│   ├── components/      # Reusable components
-│   ├── pages/          # Page components
-│   ├── data/           # Mock data and utilities
-│   └── styles/         # CSS and Tailwind styles
-└── ...
+src/
+├── components/     # Reusable UI components
+├── contexts/       # React Context providers
+├── pages/         # Page components
+├── services/      # API and service functions
+├── config/        # Configuration files
+└── assets/        # Static assets
 ```
 
-## Available Scripts
+## Database Schema
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
+The application uses the following main tables:
+- `profiles` - User profiles
+- `services` - Available services
+- `bookings` - Service bookings
+- `staff` - Staff members
+- `notifications` - User notifications
+- `user_roles` - User role management
+
+## Deployment
+
+The application is deployed using Vercel. Each push to the main branch triggers an automatic deployment.
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
